@@ -16,7 +16,7 @@ class TicTacToeTest extends TestCase
 
     public function testPlayer1CanMakeFirstMove(): void
     {
-        $this->ticTacToe->takeAField('X', new Coordinates(1, 1));
+        $this->ticTacToe->takeAField(new Player('X'), new Coordinates(1, 1));
 
         $actual = $this->ticTacToe->gameLiveScore();
 
