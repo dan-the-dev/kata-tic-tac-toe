@@ -18,8 +18,14 @@ final class Board
         $this->field = $field;
     }
 
+    /**
+     * @throws AlreadyTakenFieldException
+     */
     public function putSymbolInCoordinates(Symbol $symbol, Coordinates $coordinates): void
     {
+        if ($this->field[$coordinates->getX()][$coordinates->getY()] !== '') {
+            throw new AlreadyTakenFieldException();
+        }
         $this->field[$coordinates->getX()][$coordinates->getY()] = $symbol->getValue();
     }
 }

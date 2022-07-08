@@ -11,6 +11,9 @@ class TicTacToe
         $this->board = $board;
     }
 
+    /**
+     * @throws AlreadyTakenFieldException
+     */
     public function takeAField(Symbol $symbol, Coordinates $coordinates): void
     {
         $this->board->putSymbolInCoordinates($symbol, $coordinates);
