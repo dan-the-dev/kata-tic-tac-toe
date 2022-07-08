@@ -17,6 +17,6 @@ Rules in random order:
 
 # Test List
 
-- a player can take a field if not already taken
-- test each row
+~~- a player can take a field if not already taken~~
+~~- test each row~~
 - test not free field

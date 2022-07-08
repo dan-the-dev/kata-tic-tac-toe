@@ -14,7 +14,7 @@ class TicTacToeTest extends TestCase
         $this->ticTacToe = new TicTacToe();
     }
 
-    public function testPlayer1CanMakeFirstMoveInCoordinates11(): void
+    public function testPlayerCanMakeFirstMoveInCoordinates11(): void
     {
         $this->ticTacToe->takeAField(new Symbol('X'), new Coordinates(1, 1));
 
@@ -28,7 +28,7 @@ class TicTacToeTest extends TestCase
         $this->assertEquals($expectedField, $actual);
     }
 
-    public function testPlayer1CanMakeFirstMoveInCoordinates12(): void
+    public function testPlayerCanMakeFirstMoveInCoordinates12(): void
     {
         $this->ticTacToe->takeAField(new Symbol('X'), new Coordinates(1, 2));
 
@@ -42,7 +42,7 @@ class TicTacToeTest extends TestCase
         $this->assertEquals($expectedField, $actual);
     }
 
-    public function testPlayer1CanMakeFirstMoveInCoordinates21(): void
+    public function testPlayerCanMakeFirstMoveInCoordinates21(): void
     {
         $this->ticTacToe->takeAField(new Symbol('X'), new Coordinates(2, 1));
 
@@ -56,7 +56,7 @@ class TicTacToeTest extends TestCase
         $this->assertEquals($expectedField, $actual);
     }
 
-    public function testPlayer1CanMakeFirstMoveInCoordinates33(): void
+    public function testPlayerCanMakeFirstMoveInCoordinates33(): void
     {
         $this->ticTacToe->takeAField(new Symbol('X'), new Coordinates(3, 3));
 
