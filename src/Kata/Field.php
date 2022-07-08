@@ -5,6 +5,8 @@ namespace Kata;
 
 final class Field
 {
+    private array $field;
+
     CONST DEFAULT_FIELD = [
         ['', '', ''],
         ['', '', ''],
@@ -12,16 +14,6 @@ final class Field
     ];
 
     public function __construct(array $field = self::DEFAULT_FIELD)
-    {
-        $this->field = $field;
-    }
-
-    public function getField(): array
-    {
-        return $this->field;
-    }
-
-    public function setField(array $field): void
     {
         $this->field = $field;
     }
