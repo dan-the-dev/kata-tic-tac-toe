@@ -7,20 +7,30 @@ use Kata\TicTacToe;
 
 class TicTacToeTest extends TestCase
 {
-    private $ticTacToe;
+    private TicTacToe $ticTacToe;
 
     protected function setUp(): void
     {
         $this->ticTacToe = new TicTacToe();
     }
 
-    public function testShallPass(): void
+    public function testPlayer1CanMakeFirstMove(): void
     {
-        $this->assertEquals(1, 1);
-    }
+        $this->ticTacToe->takeAField('X', 1, 1);
 
-    public function testHandleReturnTrue(): void
-    {
-        $this->assertEquals(true, $this->ticTacToe->handle());
+        $actual = $this->ticTacToe->gameLiveScore();
+
+        $expectedSituation = [
+            [
+                'X', '', ''
+            ],
+            [
+                '', '', ''
+            ],
+            [
+                '', '', ''
+            ],
+        ];
+        $this->assertEquals($expectedSituation, $actual);
     }
 }

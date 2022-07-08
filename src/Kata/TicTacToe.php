@@ -4,8 +4,25 @@ namespace Kata;
 
 class TicTacToe
 {
-    public function handle(): bool
+    private array $field = [
+        [
+            'X', '', ''
+        ],
+        [
+            '', '', ''
+        ],
+        [
+            '', '', ''
+        ],
+    ];
+
+    public function takeAField(string $player, int $x, int $y): void
     {
-        return true;
+        //
+    }
+
+    public function gameLiveScore(): array
+    {
+        return $this->field;
     }
 }
