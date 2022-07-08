@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Kata;
 
-final class Field
+final class Board
 {
     private array $field;
 

@@ -20,7 +20,7 @@ class TicTacToeTest extends TestCase
 
         $actual = $this->ticTacToe->gameLiveScore();
 
-        $expectedField = new Field([
+        $expectedField = new Board([
             ['X', '', ''],
             ['', '', ''],
             ['', '', ''],
@@ -34,7 +34,7 @@ class TicTacToeTest extends TestCase
 
         $actual = $this->ticTacToe->gameLiveScore();
 
-        $expectedField = new Field([
+        $expectedField = new Board([
             ['', 'X', ''],
             ['', '', ''],
             ['', '', ''],

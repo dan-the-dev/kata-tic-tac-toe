@@ -13,6 +13,10 @@ Rules in random order:
  - a game is over when all fields in a column are taken by a player
  - a game is over when all fields are taken
 
+ - player should be recognized by name
+
 # Test List
 
 - a player can take a field if not already taken
+- test each row
+- test not free field
