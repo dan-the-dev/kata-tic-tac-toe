@@ -2,6 +2,7 @@
 
 namespace Kata;
 
+use Exception;
 use PHPUnit\Framework\TestCase;
 use Kata\TicTacToe;
 
@@ -68,5 +69,19 @@ class TicTacToeTest extends TestCase
             ['', '', 'X'],
         ]);
         $this->assertEquals($expectedField, $actual);
+    }
+
+    public function testPlayerCannotTakeAnOccupiedField(): void
+    {
+        $board = new Board([
+            ['', '', ''],
+            ['', '', ''],
+            ['', '', 'X'],
+        ]);
+        $ticTacToe = new TicTacToe($board);
+
+        $this->expectException(AlreadyTakenFieldException::class);
+
+        $ticTacToe->takeAField(new Symbol('X'), new Coordinates(3, 3));
     }
 }

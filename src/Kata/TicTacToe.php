@@ -4,20 +4,20 @@ namespace Kata;
 
 class TicTacToe
 {
-    private Board $field;
+    private Board $board;
 
-    public function __construct()
+    public function __construct(Board $board = new Board())
     {
-        $this->field = new Board();
+        $this->board = $board;
     }
 
     public function takeAField(Symbol $symbol, Coordinates $coordinates): void
     {
-        $this->field->putSymbolInCoordinates($symbol, $coordinates);
+        $this->board->putSymbolInCoordinates($symbol, $coordinates);
     }
 
     public function gameLiveScore(): Board
     {
-        return $this->field;
+        return $this->board;
     }
 }
