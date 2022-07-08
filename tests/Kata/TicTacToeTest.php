@@ -20,12 +20,12 @@ class TicTacToeTest extends TestCase
 
         $actual = $this->ticTacToe->gameLiveScore();
 
-        $expectedSituation = [
+        $expectedField = new Field([
             ['X', '', ''],
             ['', '', ''],
             ['', '', ''],
-        ];
-        $this->assertEquals($expectedSituation, $actual);
+        ]);
+        $this->assertEquals($expectedField, $actual);
     }
 
     public function testPlayer1CanMakeFirstMoveInCoordinates12(): void
@@ -34,11 +34,11 @@ class TicTacToeTest extends TestCase
 
         $actual = $this->ticTacToe->gameLiveScore();
 
-        $expectedSituation = [
+        $expectedField = new Field([
             ['', 'X', ''],
             ['', '', ''],
             ['', '', ''],
-        ];
-        $this->assertEquals($expectedSituation, $actual);
+        ]);
+        $this->assertEquals($expectedField, $actual);
     }
 }

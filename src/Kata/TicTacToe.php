@@ -4,18 +4,21 @@ namespace Kata;
 
 class TicTacToe
 {
-    private array $field = [
-        ['', '', ''],
-        ['', '', ''],
-        ['', '', ''],
-    ];
+    private Field $field;
+
+    public function __construct()
+    {
+        $this->field = new Field();
+    }
 
     public function takeAField(Player $player, Coordinates $coordinates): void
     {
-        $this->field[$coordinates->getX()][$coordinates->getY()] = $player->getSymbol();
+        $field = $this->field->getField();
+        $field[$coordinates->getX()][$coordinates->getY()] = $player->getSymbol();
+        $this->field->setField($field);
     }
 
-    public function gameLiveScore(): array
+    public function gameLiveScore(): Field
     {
         return $this->field;
     }
