@@ -41,4 +41,32 @@ class TicTacToeTest extends TestCase
         ]);
         $this->assertEquals($expectedField, $actual);
     }
+
+    public function testPlayer1CanMakeFirstMoveInCoordinates21(): void
+    {
+        $this->ticTacToe->takeAField(new Symbol('X'), new Coordinates(2, 1));
+
+        $actual = $this->ticTacToe->gameLiveScore();
+
+        $expectedField = new Board([
+            ['', '', ''],
+            ['X', '', ''],
+            ['', '', ''],
+        ]);
+        $this->assertEquals($expectedField, $actual);
+    }
+
+    public function testPlayer1CanMakeFirstMoveInCoordinates33(): void
+    {
+        $this->ticTacToe->takeAField(new Symbol('X'), new Coordinates(3, 3));
+
+        $actual = $this->ticTacToe->gameLiveScore();
+
+        $expectedField = new Board([
+            ['', '', ''],
+            ['', '', ''],
+            ['', '', 'X'],
+        ]);
+        $this->assertEquals($expectedField, $actual);
+    }
 }
