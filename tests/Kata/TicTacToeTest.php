@@ -84,4 +84,14 @@ class TicTacToeTest extends TestCase
 
         $ticTacToe->takeAField(new Symbol('X'), new Coordinates(3, 3));
     }
+
+    public function testCoordinatesDoesNotAllowOutOfBoundsValue(): void
+    {
+        $this->expectException(OutOfBoundsException::class);
+
+        $coordinates = new Coordinates(1, 4);
+
+        $player = new Player('pippo', new Symbol('X'));
+        $a = $player->symbol()->getValue();
+    }
 }

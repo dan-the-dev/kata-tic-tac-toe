@@ -5,6 +5,9 @@ namespace Kata;
 
 final class Symbol
 {
+    const X = 'x';
+    const O = 'o';
+
     private string $value;
 
     public function __construct(string $symbol)

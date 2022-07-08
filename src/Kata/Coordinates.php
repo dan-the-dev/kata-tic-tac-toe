@@ -10,6 +10,10 @@ final class Coordinates
 
     public function __construct(int $x, int $y)
     {
+        if ($y > 3) {
+            throw new OutOfBoundsException();
+        }
+        
         $this->x = $x - 1;
         $this->y = $y - 1;
     }
