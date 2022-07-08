@@ -16,7 +16,7 @@ class TicTacToe
         ],
     ];
 
-    public function takeAField(string $player, int $x, int $y): void
+    public function takeAField(string $player, Coordinates $coordinates): void
     {
         //
     }
