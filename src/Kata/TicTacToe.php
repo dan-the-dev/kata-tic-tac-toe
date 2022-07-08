@@ -11,11 +11,9 @@ class TicTacToe
         $this->field = new Field();
     }
 
-    public function takeAField(Player $player, Coordinates $coordinates): void
+    public function takeAField(Symbol $symbol, Coordinates $coordinates): void
     {
-        $field = $this->field->getField();
-        $field[$coordinates->getX()][$coordinates->getY()] = $player->getSymbol();
-        $this->field->setField($field);
+        $this->field->putSymbolInCoordinates($symbol, $coordinates);
     }
 
     public function gameLiveScore(): Field

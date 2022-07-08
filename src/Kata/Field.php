@@ -26,5 +26,8 @@ final class Field
         $this->field = $field;
     }
 
-
+    public function putSymbolInCoordinates(Symbol $symbol, Coordinates $coordinates): void
+    {
+        $this->field[$coordinates->getX()][$coordinates->getY()] = $symbol->getValue();
+    }
 }

@@ -16,7 +16,7 @@ class TicTacToeTest extends TestCase
 
     public function testPlayer1CanMakeFirstMoveInCoordinates11(): void
     {
-        $this->ticTacToe->takeAField(new Player('X'), new Coordinates(1, 1));
+        $this->ticTacToe->takeAField(new Symbol('X'), new Coordinates(1, 1));
 
         $actual = $this->ticTacToe->gameLiveScore();
 
@@ -30,7 +30,7 @@ class TicTacToeTest extends TestCase
 
     public function testPlayer1CanMakeFirstMoveInCoordinates12(): void
     {
-        $this->ticTacToe->takeAField(new Player('X'), new Coordinates(1, 2));
+        $this->ticTacToe->takeAField(new Symbol('X'), new Coordinates(1, 2));
 
         $actual = $this->ticTacToe->gameLiveScore();
 
