@@ -10,8 +10,8 @@ final class Coordinates
 
     public function __construct(int $x, int $y)
     {
-        $this->x = $x;
-        $this->y = $y;
+        $this->x = $x - 1;
+        $this->y = $y - 1;
     }
 
     public function getX(): int
